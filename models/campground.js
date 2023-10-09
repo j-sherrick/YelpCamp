@@ -1,11 +1,19 @@
-const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('mariadb');
+const { DataTypes} = require('sequelize');
 
-const Campground = sequelize.define("campground", {
-    title: DataTypes.TEXT,
-    price: DataTypes.TEXT,
-    description: DataTypes.TEXT,
-    location: DataTypes.TEXT
-});
-
-module.exports = Campground;
+module.exports = (sequelize, Sequelize) => {
+    const Campground = sequelize.define("campground", {
+        title: {
+            type: DataTypes.STRING
+        },
+        price: {
+            type: DataTypes.STRING
+        },
+        description: {
+            type: DataTypes.STRING
+        },
+        location: {
+            type: DataTypes.STRING
+        }
+    });
+    return Campground;
+}
