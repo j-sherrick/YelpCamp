@@ -4,12 +4,12 @@ const Campground = db.campgrounds;
 exports.create = (req, res) => {
 
     // Create a campground
-    const campground = {
-        title: 'Tent City',
-        description: 'Cheapest camping in San Francisco!',
-        price: 'free',
-        location: 'San Francisco'
-    };
+    // const campground = {
+    //     title: 'Tent City',
+    //     description: 'Cheapest camping in San Francisco!',
+    //     price: 'free',
+    //     location: 'San Francisco'
+    // };
 
     Campground.create(campground)
         .then(data => {
@@ -18,4 +18,9 @@ exports.create = (req, res) => {
         .catch(error => {
             console.error(error);
         })
+};
+
+exports.getAll = async (req, res) => {
+    const campgrounds = await Campground.findAll();
+    res.render('../views/campgrounds/index', { campgrounds });
 };

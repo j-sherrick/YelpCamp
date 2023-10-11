@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.render('home', {greeting: 'HELLO FROM YELPCAMP'});
 })
 
-app.get('/makecampground', campgrounds.create);
+app.get('/campgrounds', campgrounds.getAll);
 
 app.listen(3000, () => {
     console.log('serving on port 3000');
