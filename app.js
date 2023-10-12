@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.get('/campgrounds', campgrounds.showAll);
 
-app.get('/campgrounds/id', campgrounds.show);
+app.get('/campgrounds/:id', campgrounds.show);
 
 app.listen(3000, () => {
     console.log('serving on port 3000');

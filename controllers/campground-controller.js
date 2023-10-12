@@ -26,11 +26,21 @@ exports.showAll = async (req, res) => {
 };
 
 exports.show = async (req, res) => {
-    const campground = await Campground.findAll({
-        where: {
-            id: req.params['id']
-        }
-    });
+    
+    try {
+        const campground = await Campground.findAll({
+            where: {
+                id: req.params['id']
+            }
+        });
 
-    res.render('..views/show',{  campground });
+        if (!campground) {
+            throw new Error('No object returned from database.');
+        }
+        console.log(`Campgrounds object \n ${campground}`);
+        console.log(campground.id + '\n' + campground.title);
+        res.render('../views/campgrounds/show',{  campground });
+    } catch(error) {
+            console.error(error);
+    }
 }
