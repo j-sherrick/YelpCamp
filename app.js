@@ -1,8 +1,6 @@
 const express = require('express');
 const path = require('path');
 const db = require('./controllers/db-connect');
-const seed = require('./seed-data/seed');
-const { error } = require('console');
 
 db()
     .then(() => {
@@ -12,13 +10,7 @@ db()
         console.error.apply(`db had an error: ${error}`);
     })
 
-seed()
-    .then(() => {
-        console.log('db got seeded');
-    })
-    .catch((err) => {
-        console.error(`seeding ran into a problem: ${err}`);
-    })
+const Campground = require('./models/campground');
 
 const app = express();
 
@@ -29,9 +21,17 @@ app.get('/', (req, res) => {
     res.render('home', {greeting: 'HELLO FROM YELPCAMP'});
 })
 
-// app.get('/campgrounds');
+app.get('/campgrounds', async (req, res) => {
+    const campgrounds = await Campground.find({});
 
-// app.get('/campgrounds/:id');
+    res.render('campgrounds/index', { campgrounds });
+});
+
+app.get('/campgrounds/:id', async (req, res) => {
+    const campground = await Campground.findById(req.params.id);
+
+    res.render('campgrounds/show', { campground });
+});
 
 app.listen(3000, () => {
     console.log('serving on port 3000');
