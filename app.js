@@ -2,15 +2,16 @@ const express = require('express');
 const path = require('path');
 const db = require('./controllers/db-connect');
 
-db()
-    .then(() => {
-        console.log('db is connected');
-    })
-    .catch((error) => {
-        console.error.apply(`db had an error: ${error}`);
-    })
+// db()
+//     .then(() => {
+//         console.log('db is connected');
+//     })
+//     .catch((err) => {
+//         console.error(`db had an error: ${err}`);
+//     })
 
 const Campground = require('./models/campground');
+const { error } = require('console');
 
 const app = express();
 

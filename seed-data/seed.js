@@ -1,6 +1,7 @@
 const Campground = require('../models/campground');
 const { descriptors, elements, places } = require('../seed-data/seed-data');
 const cities = require('../seed-data/cities');
+const db = require('../controllers/db-connect');
 
 function getRandom20() {
     return Math.floor(Math.random() * 20);
@@ -37,4 +38,10 @@ async function seedDb() {
     }
 }
 
-module.exports = seedDb;
+seedDb()
+    .then(() => {
+        console.log('database seeded');
+    })
+    .catch((err) => {
+        console.log(`database error:\n${err}`);
+    })
