@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
+const morgan = require('morgan');
 
 // Connect to database and get Campground schema
 const db = require('./controllers/db-connect');
@@ -16,6 +17,14 @@ app.set('views', path.join(__dirname, 'views'));
 // parse request bodies
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
+
+// enable logging
+// app.use(morgan('tiny'));
+
+app.use('/campgrounds/:id', (req, res, next) => {
+    console.log(req.method.toUpperCase(), req.baseUrl);
+    next();
+})
 
 // default route
 app.get('/', (req, res) => {
