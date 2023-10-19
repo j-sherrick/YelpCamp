@@ -20,6 +20,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
+// serve static files
+app.use(express.static(path.join(__dirname, 'assets')));
+
 // enable logging
 // app.use(morgan('tiny'));
 
