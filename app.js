@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
-const morgan = require('morgan');
+
+const ejsMate = require('ejs-mate');
 
 // Connect to database and get Campground schema
 const db = require('./controllers/db-connect');
@@ -10,7 +11,8 @@ const Campground = require('./models/campground');
 // Create application
 const app = express();
 
-// Set ejs views
+// Set view & template engine
+app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
