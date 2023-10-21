@@ -1,0 +1,18 @@
+/* Error: expected ";".
+ *    ,
+ * 25 |     min-height: 100vh;
+ *    |               ^
+ *    '
+ *   sass/partials/_base.scss 25:15  @import
+ *   sass/main.scss 1:9              root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected ";".\a    \2577 \a 25 \2502      min-height: 100vh;\a    \2502                ^\a    \2575 \a   sass/partials/_base.scss 25:15  @import\a   sass/main.scss 1:9              root stylesheet';
+}

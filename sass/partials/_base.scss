@@ -1,0 +1,26 @@
+*  {
+    margin: 0;
+    padding: 0;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+body {
+    font: 400 1rem/1.7 'Open Sans', sans-serif;
+    // color: var();
+    background:
+        // linear-gradient(to right bottom, rgba(200, 100, 100, .5), rgba(200, 150, 150, .5)),
+        // linear-gradient(to left bottom, rgba(100, 100, 200, .5), rgba(150, 150, 200, .5))
+        // no-repeat
+        // center/cover;
+    min-height: 100vh;
+}
