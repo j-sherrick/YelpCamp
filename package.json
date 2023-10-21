@@ -4,8 +4,9 @@
   "description": "The World's Best Campsite Rating App",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "seed": "node seed.js"
+    "watch-css": "sass sass/main.scss assets/css/style.css",
+    "nodemon": "nodemon",
+    "start": "npm-run-all --parallel nodemon watch-css"
   },
   "keywords": [
     "nodejs",
