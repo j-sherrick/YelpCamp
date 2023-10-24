@@ -1,5 +1,4 @@
-*,
-svg  {
+* {
     margin: 0;
     padding: 0;
 }
@@ -17,12 +16,12 @@ html {
 
 body {
     font: 400 1rem/1.7 'Open Sans', sans-serif;
-    // color: var();
     background:
-        linear-gradient(to right bottom, rgb(51, 253, 0), rgb(255, 255, 255))
-        // linear-gradient(to left bottom, rgba(100, 100, 200, .5), rgba(150, 150, 200, .5))
+        // linear-gradient(to right bottom, rgb(205, 220, 236), rgb(25, 183, 231))
         no-repeat
         center/cover;
-    // min-height: 130vh;
-    // position: relative;
+    min-height: 130vh;
+    position: relative;
+    font: 400 1.1rem/1.5 Poppins, sans-serif;
+    letter-spacing: 0.1rem;
 }
