@@ -1,14 +1,15 @@
 .header {
-    position: absolute;
-    height: 4rem;
+    // position: absolute;
+    // height: 4rem;
     background-color: white;
     width: 100%;
 }
 
 .navigation {
     display: flex;
-
-
+    // height: 100%;
+    width: 100%;
+    justify-content: space-between;
     &__branding {
 
     }
@@ -19,6 +20,7 @@
 
     &__links {
         display: flex;
+        justify-content: space-between;
 
         &--collapsed {
             display: none;
@@ -26,7 +28,8 @@
     }
 
     &__hamburger {
-
+        // align-self: flex-end;
+        // height: 100%;
     }
 
     &__item {

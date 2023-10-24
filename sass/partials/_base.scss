@@ -1,4 +1,5 @@
-*  {
+*,
+svg  {
     margin: 0;
     padding: 0;
 }
@@ -22,6 +23,6 @@ body {
         // linear-gradient(to left bottom, rgba(100, 100, 200, .5), rgba(150, 150, 200, .5))
         no-repeat
         center/cover;
-    min-height: 130vh;
-    position: relative;
+    // min-height: 130vh;
+    // position: relative;
 }
