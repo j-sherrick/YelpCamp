@@ -36,6 +36,7 @@ app.get('/', (req, res) => {
     res.render('home', {greeting: 'HELLO FROM YELPCAMP'});
 })
 
+
 // Campgrounds index
 app.get('/campgrounds', async (req, res) => {
     const campgrounds = await Campground.find({});

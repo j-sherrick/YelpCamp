@@ -1,10 +1,10 @@
 .header {
     position: absolute;
     height: 4rem;
-    background-color: white;
     width: 100%;
-    padding: .5rem 2rem;
-    background: #114df0;
+    padding: .5rem 0;
+    background: var(--color-primary);
+    color: white;
 }
 
 .navigation {
@@ -13,26 +13,44 @@
     justify-content: space-between;
     align-items: center;
 
+    a {
+        color: white;
+    }
+
     &__logo {
         text-decoration: none;
-        color: white;
         font-size: 2rem;
     }
 
-    &__links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 4rem;
+    &__items {
+        display: none;
         position: absolute;
         top: 4rem;
+        background-color: var(--color-primary);
+        width: 100%;
+        transition: all .5s ease-in-out;
 
-        &--collapsed {
-            display: none;
+        &--active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
-    &__hamburger {
+    &__item {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+            background-color: var(--color-primary-light);
+        }
+    }
+
+    &__toggle-button {
         height: 3rem;
         width: 3rem;
         fill: #ffffff;
@@ -68,3 +86,12 @@
     }
 }
 
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-40rem);
+    }
+    100% {
+        transform: translateY(4rem);
+    }
+}

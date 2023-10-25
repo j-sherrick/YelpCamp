@@ -1,3 +1,9 @@
+:root {
+  --color-primary-light: #466fe2;
+  --color-primary: #114df0;
+  --color-primary-dark: #11369b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,10 +35,10 @@ body {
 .header {
   position: absolute;
   height: 4rem;
-  background-color: white;
   width: 100%;
-  padding: 0.5rem 2rem;
-  background: #114df0;
+  padding: 0.5rem 0;
+  background: var(--color-primary);
+  color: white;
 }
 
 .navigation {
@@ -41,28 +47,43 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.navigation a {
+  color: white;
+}
 .navigation__logo {
   text-decoration: none;
-  color: white;
   font-size: 2rem;
 }
-.navigation__links {
+.navigation__items {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  background-color: var(--color-primary);
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.navigation__items--active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 4rem;
-  position: absolute;
-  top: 4rem;
 }
-.navigation__links--collapsed {
-  display: none;
+.navigation__item {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
 }
-.navigation__hamburger {
+.navigation__item:hover {
+  background-color: var(--color-primary-light);
+}
+.navigation__toggle-button {
   height: 3rem;
   width: 3rem;
   fill: #ffffff;
 }
-.navigation__hamburger:hover {
+.navigation__toggle-button:hover {
   cursor: pointer;
 }
 .campgrounds {
@@ -81,6 +102,15 @@ body {
 }
 .campgrounds__item > a {
   text-decoration: none;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-40rem);
+  }
+  100% {
+    transform: translateY(4rem);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
