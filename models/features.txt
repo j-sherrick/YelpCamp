@@ -20,7 +20,7 @@ Campground
     Region[
         Location,
     ],
-    Type[
+    Group[
         cabins,
         hunting,
         fishing,
@@ -29,7 +29,8 @@ Campground
         rv[class],
         groups,
         day-use,
-        tents
+        tents,
+        rugged
     ],
     Ameneties[
         bike-trails,
@@ -70,5 +71,7 @@ Campground
         cable,
         concessions,
         drinking-water,
-        emergency
+        emergency,
+        airport,
+        helipad
     ],

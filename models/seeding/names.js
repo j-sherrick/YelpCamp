@@ -1,5 +1,5 @@
 
-const descriptors = [
+const first = [
     'Big',
     'Muddy',
     'Roaming',
@@ -22,7 +22,7 @@ const descriptors = [
     'Dusty'
 ]
 
-const elements = [
+const second = [
     'Deer',
     'Tree',
     'Leaf',
@@ -45,7 +45,7 @@ const elements = [
     'Bush'
 ]
 
-const places = [
+const third = [
     'Camp',
     'Horse Camp',
     'Village',
@@ -68,4 +68,4 @@ const places = [
     'Woods'
 ]
 
-module.exports = {descriptors, elements, places};
+module.exports = { first, second, third };

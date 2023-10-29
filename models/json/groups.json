@@ -1,0 +1,15 @@
+{
+    "types": [
+        "cabins",
+        "camping",
+        "tents",
+        "day-use",
+        "hunting",
+        "fishing",
+        "overnight",
+        "rv-sites",
+        "groups",
+        "day-use",
+        "rugged"
+    ]
+}
