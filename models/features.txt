@@ -1,0 +1,55 @@
+boating
+camping
+lodging
+trails
+hunting
+fishing
+swimming
+scenic/photography
+accessibility
+restrooms
+showers
+dumpsite
+electricity
+bicycling
+scuba
+equestrian
+
+Campground
+    Type[
+        cabins,
+        hunting,
+        fishing,
+        camping,
+        overnight,
+        rv[class],
+        groups,
+        day-use,
+        tents
+    ],
+    Ameneties[
+        bike-trails,
+        parking,
+        scuba,
+        showers,
+        sanitary,
+        equestrian,
+        picnic[table, pavilion, shelter],
+        boating[
+            dock,
+            pier,
+            conoeing,
+            motorboats[water-skiing, jet-skis, racing]
+        ],
+        restrooms,
+        playground,
+        rv-sites,
+        fishing,
+        forest,
+        volleyball,
+        sewer,
+        cable-tv, 
+    ],
+    Region[
+        Location,
+    ]
