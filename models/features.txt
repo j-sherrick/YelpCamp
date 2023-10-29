@@ -16,6 +16,10 @@ scuba
 equestrian
 
 Campground
+    Name
+    Region[
+        Location,
+    ],
     Type[
         cabins,
         hunting,
@@ -29,6 +33,22 @@ Campground
     ],
     Ameneties[
         bike-trails,
+        fishing,
+        hunting,
+        fire-pit,
+        bird-watching,
+        store,
+        grills,
+        sports[
+            volleyball,
+            softball,
+            basketball,
+            soccer,
+            football,
+            golf,
+            frisbee-golf,
+
+        ],
         parking,
         scuba,
         showers,
@@ -39,17 +59,16 @@ Campground
             dock,
             pier,
             conoeing,
-            motorboats[water-skiing, jet-skis, racing]
+            motorboats[water-skiing, jet-skis, racing],
+            kayaking
         ],
         restrooms,
         playground,
         rv-sites,
-        fishing,
         forest,
-        volleyball,
         sewer,
-        cable-tv, 
+        cable,
+        concessions,
+        drinking-water,
+        emergency
     ],
-    Region[
-        Location,
-    ]
