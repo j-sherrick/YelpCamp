@@ -32,6 +32,11 @@ body {
   margin: 0 auto;
 }
 
+.landing {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .header {
   position: absolute;
   height: 4rem;
@@ -111,6 +116,41 @@ body {
   100% {
     transform: translateY(4rem);
   }
+}
+.explore-view {
+  display: flex;
+}
+.explore-view__heading-primary {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.explore-view__heading-secondary {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.explore-view__cta {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.explore-view__action {
+  padding: 3rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.explore-view__content {
+  padding: 0 1rem;
+  position: relative;
+}
+.explore-view__content-primary {
+  width: 100%;
+}
+.explore-view__content-secondary {
+  display: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

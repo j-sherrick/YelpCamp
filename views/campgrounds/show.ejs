@@ -1,8 +1,30 @@
 <% layout('layouts/BaseLayout') %>
-<h1><%= campground.title %></h1>
-<h2> <%= campground.location %> </h2>
+<main class="location">\
+    <section class="location__viewer">
+        <div class="location__heading">
+            <h1><%= campground.name %></h1>
+            <h2><%= campground.location.city %></h2>
+            <h2><%= campground.location.state  %></h2>
+        </div>
+
+        <div class="location__info">
+            <div class="location__groups">
+                <% campground.groups.forEach(group => { %>
+                    <div class="location__group">
+                        <h3><%= group %></h3>
+                    </div>
+                <% }) %>
+            </div>
+
+            <div class="location__ameneties">
+                <% campground.amentities.forEach(amenity => { %>
+                    <h4><%= amenity %></h4>
+                <% }) %>
+            </div>
+        </div>
+    </section>
+</main>
 <div>
-    <a href="/campgrounds">All Campgrounds</a>
     <a href="/campgrounds/<%= campground._id %>/edit">Edit</a>
 </div>
 <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="post">
