@@ -11,11 +11,11 @@ const campAmenities = require('../json/amenities.json');
 
 // Builds a random Campground object
 function randomCampground() {
-    const location = randomPickLocation();
+
     return {
         name: randomPickName(),
-        groups: randomPickMany(campGroups, 3),
-        amenities: randomPickMany(campAmenities, 6),
+        groups: randomPickMany(campGroups.types, 3),
+        amenities: randomPickMany(campAmenities.types, 6),
         location: randomPickLocation()
     }
 }
@@ -27,6 +27,7 @@ function randomPickOne(arr) {
 
 // Picks `n` random, unique elements from an array `arr`
 function randomPickMany(arr, n) {
+    n = Math.floor(Math.random() * n) + 1; // Get a random amount [1, n] rather than just always having the same `n`
     let picksRemaining = arr;
     let picks = [];
     let pick = "";
@@ -51,4 +52,5 @@ function randomPickLocation () {
     return { city: location.city, state: location.state };
 }
 
-module.exports = { randomCampground };
+
+module.exports = { randomCampground, randomPickOne, randomPickMany };

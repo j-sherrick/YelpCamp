@@ -7,7 +7,7 @@
     "watch-css": "sass sass/main.scss assets/css/style.css -w",
     "nodemon": "nodemon",
     "start": "npm-run-all --parallel nodemon watch-css",
-    "seed": "node seed-data/seed.js"
+    "seed": "node models/seeding/app.js"
   },
   "keywords": [
     "nodejs",

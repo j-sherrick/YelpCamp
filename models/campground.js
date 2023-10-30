@@ -4,9 +4,11 @@ const Schema = mongoose.Schema;
 const campingGroups = require('./json/groups.json');
 const campingAmenities = require('./json/amenities.json');
 
-const normalizeArray = arr => [ ...Set( arr.map(e => e.toLowerCase()) ) ];
+function normalizeArray(arr) {
+    return [ ...Set( arr.map(e => e.toLowerCase()) ) ];
+} 
 
-const validateTypes = (givenTypes, allowedTypes) => {
+function validateTypes(givenTypes, allowedTypes) {
     let validType = givenTypes.length > 0;
 
     for (let i = 0; i < givenTypes.length && validType; i++) {
@@ -25,33 +27,35 @@ const CampgroundSchema = new Schema({
 
     groups: {
         type: [String],
-        required: [true, 'Must provide at least one group'],
-        set: normalizeArray,
-        validate: {
-            validator: function(t) {
-                return validateTypes(t, campingGroups.types);
-            }
-        }
+        required: [true, 'Must provide at least one group']
+        // set: normalizeArray,
+        // validate: {
+        //     validator: function(t) {
+        //         return validateTypes(t, campingGroups.types);
+        //     }
+        // }
     },
 
     amenities: {
-        type: [String],
-        set: normalizeArray,
-        validate: {
-            validator: function(t) {
-                return validateTypes(t, campingAmenities.types);
-            }
-        }
+        type: [String]
+        // set: normalizeArray,
+        // validate: {
+        //     validator: function(t) {
+        //         return validateTypes(t, campingAmenities.types);
+        //     }
+        // }
     },
 
     location: {
-        city: {
-            type: String,
-            required: [true, 'Must provide a city']
-        },
-        state: {
-            type: String,
-            required: [true, 'Must provide a state']
+        type: {
+            city: {
+                type: String,
+                required: [true, 'Must provide a city']
+            },
+            state: {
+                type: String,
+                required: [true, 'Must provide a state']
+            }
         },
         required: [true, 'Location is required'],
         region: String

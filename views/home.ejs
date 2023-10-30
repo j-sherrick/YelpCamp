@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YelpCamp | Ratings App For Campgrounds</title>
-</head>
-<body>
-    <h1>
-        <%= greeting %>
-    </h1>
-</body>
-</html>
+<% layout('layouts/BaseLayout') %>
+<main class="landing">
+    <section class="explore-view">
+        <div class="explore-view__cta">
+            <h1 class="explore-view__heading-primary">Explore the US</h1>
+            <h2 class="explore-view__heading-secondary">Experience the appeal of the frontier. Come explore the vast array of landscapes that America has to offer.</h2>
+            <a href="/campgrounds" class="explore-view__action">Explore Now</a>
+        </div>
+        <div class="explore-view__content">
+            <img src="/images/hike-in-utah.webp" alt="primary explore america image" class="explore-view__content-primary">
+            <img src="/images/mouintain-trail-bike-trip.webp" alt="primary explore america image" class="explore-view__content-secondary">
+        </div>
+    </section>
+</section>

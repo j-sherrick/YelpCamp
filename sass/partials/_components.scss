@@ -95,3 +95,48 @@
         transform: translateY(4rem);
     }
 }
+
+.explore-view {
+    display: flex;
+
+    &__heading {
+
+        &-primary {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        &-secondary {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+    }
+
+    &__cta {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__action {
+        padding: 3rem 1rem;
+        border: 1px solid black;
+        border-radius: .5rem;
+        text-decoration: none;
+    }
+
+    &__content {
+        padding: 0 1rem;
+        position: relative;
+
+        &-primary {
+            width: 100%;
+        }
+
+        &-secondary {
+            display: hidden;
+        }
+    }
+}

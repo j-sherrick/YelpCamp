@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 const ejsMate = require('ejs-mate');
 
 // Connect to database and get Campground schema
-const db = require('./controllers/db-connect');
+const db = require('./controllers/db.js');
 const Campground = require('./models/campground');
 
 // Create application
@@ -33,7 +33,7 @@ app.use('/campgrounds/:id', (req, res, next) => {
 
 // default route
 app.get('/', (req, res) => {
-    res.render('home', {greeting: 'HELLO FROM YELPCAMP'});
+    res.render('home', { pageMeta: {title: 'Home'} });
 })
 
 
